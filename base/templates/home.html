@@ -100,20 +100,22 @@
             <div id="wowslider-container1"  class="wowslider-container">
 
               <div class="ws_images"><ul>
-              {% for i in 'xxxxx' %}
+                {% for i in 'xxxxx' %}
                 <li><img src="/media/images/flower_{{forloop.counter}}.jpg" alt="" title="" id=""/></li>
                 {%endfor%}
               </ul></div>
               <div class="ws_bullets">
                 <div>
 
-                  {% for i in 'xxxxx' %}
-                  
-
-                  {% thumbnail '/media/images/flower_{{forloop.counter}}.jpg'|get_path "128x48" crop="center" as im %}
+                  {% comment %}
+                    {% for i in 'xxxxx' %}
+                  {% thumbnail '/media/images/flower_'|add:y|add:'.jpg'|get_path "128x48" crop="center" as im %}
                   <a href="#" title=""><span><img src="{{im.url}}" alt=""/>{{forloop.counter}}</span></a>
                   {% endthumbnail %}
+                  {%endwith%}
+
                   {% endfor %}
+                  {% endcomment %}
                 </div>
               </div>
               <div class="ws_script" style="position:absolute;left:-99%"><a href="/">bootstrap carousel</a> by WOWSlider.com v8.6m</div>
