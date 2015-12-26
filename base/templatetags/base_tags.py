@@ -39,6 +39,7 @@ def get_path(url):
 
 
 
+
 @register.tag
 def base_url(parser, token):
     return UrlNode()
