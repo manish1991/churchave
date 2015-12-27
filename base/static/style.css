@@ -87,7 +87,7 @@ h1, h2, h3, h4, .header h1 a, .page .portfolio .item, .page .portfolio .item a, 
   border-radius: 50%;
   background-clip: padding-box; }
   #imagelightbox-close:hover {
-    background-color: #e93478; }
+    background-color: #f0c125; }
   #imagelightbox-close:before, #imagelightbox-close:after {
     width: 2px;
     background-color: #fff;
@@ -268,7 +268,7 @@ a {
       width: 304px;
       height: 136px;
       padding: 20px 45px 0;
-      color: #e93478;
+      color: #f0c125;
       text-align: center;
       background: url(images/background-logo.png) no-repeat 0 0; }
       @media all and (min-width: 960px) {
@@ -335,7 +335,7 @@ a {
       .menu ul.items li a {
         padding: 10px 0; } }
     .menu ul.items li a:hover, .menu ul.items li a.active {
-      color: #e93478; }
+      color: #f0c125; }
   .menu ul.social {
     position: absolute;
     top: 13px;
@@ -413,7 +413,7 @@ a {
     .page .promo .flexslider .flex-control-paging li a {
       width: 15px;
       height: 15px;
-      background: #e93478;
+      background: #f0c125;
       display: block;
       cursor: pointer;
       text-indent: -9999px;
@@ -438,7 +438,7 @@ a {
       text-align: center;
       border-bottom: 1px solid #d5d5d5; }
       .page .abstract p em {
-        color: #e93478;
+        color: #f0c125;
         font-size: 18px; }
   .page .services h2, .page .portfolio h2, .page .team h2 {
     margin-bottom: 45px;
@@ -462,7 +462,7 @@ a {
       font-style: italic;
       margin-bottom: 15px;
       font-size: 18px;
-      color: #e93478;
+      color: #f0c125;
       margin-bottom: 20px; }
   .page .products {
     line-height: 20px;
@@ -521,7 +521,7 @@ a {
           background: url(images/icons-sprite.png) no-repeat -219px -78px;
           line-height: 20px;
           padding-left: 24px;
-          color: #e93478;
+          color: #f0c125;
           -webkit-transition: all 0.3s ease-in-out;
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
@@ -605,11 +605,11 @@ a {
     .page .team h3 {
       font-size: 18px;
       font-style: italic;
-      color: #e93478; }
+      color: #f0c125; }
     .page .team p {
       margin-bottom: 7px; }
       .page .team p span {
-        color: #e93478; }
+        color: #f0c125; }
       .page .team p strong {
         text-transform: uppercase;
         font-weight: normal; }
@@ -724,16 +724,16 @@ a {
           font-style: italic;
           margin-bottom: 25px; }
         .page .map .address div h4 {
-          color: #e93478;
+          color: #f0c125;
           text-transform: uppercase;
           font-size: 20px;
           margin-bottom: 10px; }
         .page .map .address div strong {
           font-weight: normal;
-          color: #e93478; }
+          color: #f0c125; }
   .page .contact {
     border-top: 6px solid #f8c6c1;
-    background: #e93478;
+    background: #eebe25;
     color: #f7f8fa;
     font-size: 14px;
     padding: 30px 0; }
@@ -803,7 +803,7 @@ a {
           background-color: #f8c6c1; }
       .page .contact .form button {
         background: #c3d982;
-        color: #e93478;
+        color: #f0c125;
         font-size: 22px;
         width: 96.875%;
         cursor: pointer;
@@ -855,7 +855,7 @@ a {
   background: #f7f8fa url(images/pink-wave-pattern.png) center top repeat-x;
   text-align: center; }
   .footer .container p, .footer .container p a {
-    color: #e93478;
+    color: #f0c125;
     font-size: 14px; }
 
 .anchor {
