@@ -149,7 +149,7 @@ class AccountAuthView(RegisterUserMixin, generic.TemplateView):
 
     def validate_login_form(self):
         form = self.get_login_form(bind_data=True)
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace()
         # print 'canhxx', form.is_valid()
         if form.is_valid():
             user = form.get_user()
