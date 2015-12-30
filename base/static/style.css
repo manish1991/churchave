@@ -733,10 +733,11 @@ a {
           color: #f0c125; }
   .page .contact {
     border-top: 6px solid #f8c6c1;
-    background: #f0c125;
+    background: url(/static/images/rose.jpg);
     color: #f7f8fa;
     font-size: 14px;
-    padding: 30px 0; }
+    padding: 30px 0;
+    }
     .page .contact .form {
       float: left;
       margin-left: 10%;
@@ -819,7 +820,9 @@ a {
     .page .contact .more {
       float: right;
       margin-right: 10%;
-      width: 26.3542%; }
+      width: 80%;
+      color: #000;
+      }
       @media all and (max-width: 600px) {
         .page .contact .more {
           width: 80%;
