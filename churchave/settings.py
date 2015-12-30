@@ -12,19 +12,44 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
 OSCAR_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
 from oscar import get_core_apps
 from oscar.defaults import *
 
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL='noreply@alltechstar.com'
+EMAIL_HOST_USER = 'alltechstarsendmail@gmail.com'
+EMAIL_HOST_PASSWORD = 'alltechalltech'
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2$8*)&w+50828h6s)wlud69v-_)+nj#bh$j)6hz9+po9nnwosw'
+import environ
+env = environ.Env()
+# Ideally move env file should be outside the git repo
+# i.e. BASE_DIR.parent.parent
+env_file = BASE_DIR / 'local.env'
+if env_file.is_file():
+    environ.Env.read_env(str(env_file))
+
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = env('SECRET_KEY')
+# SECRET_KEY="p!$$tlczxr@47&*kg@zhd6fh6xkd__rosy=#k5w+=z8zrp3p&m"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -115,11 +140,11 @@ WSGI_APPLICATION = 'churchave.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    # Raises ImproperlyConfigured exception if DATABASE_URL not in
+    # os.environ
+    'default': env.db(),
 }
+
 
 
 # Internationalization

@@ -149,14 +149,16 @@ class AccountAuthView(RegisterUserMixin, generic.TemplateView):
 
     def validate_login_form(self):
         form = self.get_login_form(bind_data=True)
+        import pdb; pdb.set_trace()
+        # print 'canhxx', form.is_valid()
         if form.is_valid():
             user = form.get_user()
 
             # Grab a reference to the session ID before logging in
             old_session_key = self.request.session.session_key
+            
 
             auth_login(self.request, form.get_user())
-
             # Raise signal robustly (we don't want exceptions to crash the
             # request handling). We use a custom signal as we want to track the
             # session key before calling login (which cycles the session ID).

@@ -867,3 +867,9 @@ a {
 div#wowslider-container1 {
     margin-top: 60px;
 }
+
+
+.item img {
+    width: 100%;
+    height: 100%;
+}
