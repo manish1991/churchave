@@ -96,6 +96,11 @@ MIDDLEWARE_CLASSES = (
     
 )
 
+AUTHENTICATION_BACKENDS = (
+    'oscar.apps.customer.auth_backends.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 
 HAYSTACK_CONNECTIONS = {
     'default': {
