@@ -17,7 +17,18 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+from oscar.app import application as oscarapplication
+from paypal.express.dashboard.app import application
+
+from django.conf import settings
+from oscarstore import views as oscarstoreview
+
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('base.urls')),
+    url(r'^shop/', include(oscarapplication.urls)),
+    url(r'^shop/checkout/paypal/', include('paypal.express.urls')),
+    url(r'^shop/dashboard/paypal/express/', include(application.urls)),
+    url(r'^paypal/redirect/', oscarstoreview.RedirectView.as_view(), name='paypal-redirect'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

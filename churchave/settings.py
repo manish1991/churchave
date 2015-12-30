@@ -14,6 +14,10 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OSCAR_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from oscar import OSCAR_MAIN_TEMPLATE_DIR
+from oscar import get_core_apps
+from oscar.defaults import *
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +34,16 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
+    'django_admin_bootstrapped',
+    'crispy_forms',
+    #canhhs
+    'django.contrib.sites', 
+    'django.contrib.flatpages',
+    'compressor',
+    'widget_tweaks',
+    'paypal',
+    #end canhhs
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,8 +51,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
-    'sorl.thumbnail',
-)
+]+ get_core_apps()
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,14 +64,32 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    #canhhs added
+    'oscar.apps.basket.middleware.BasketMiddleware', 
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    #end canhhs
+    
 )
 
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+    },
+}
+
+
 ROOT_URLCONF = 'churchave.urls'
+
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(OSCAR_BASE_DIR, 'templates'),
+            OSCAR_MAIN_TEMPLATE_DIR
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +97,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'oscar.apps.search.context_processors.search_form',
+                'oscar.apps.promotions.context_processors.promotions',
+                'oscar.apps.checkout.context_processors.checkout',
+                'oscar.apps.customer.notifications.context_processors.notifications',
+                'oscar.core.context_processors.metadata',
             ],
         },
     },
@@ -111,3 +149,24 @@ MEDIA_URL = '/media/'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))+'/..'
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
+
+#canhhs
+# PAYPAL_API_USERNAME = 'canhhs91-facilitator_api1.gmail.com'
+# PAYPAL_API_PASSWORD = 'DPCFFE3J4QRESJNF'
+# PAYPAL_API_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ag7zVA2tWWA96x4iGnEEEr7cNvvI'
+PAYPAL_API_USERNAME = 'greenpointtrees_api1.gmail.com'
+PAYPAL_API_PASSWORD = 'VDNU6UHWPNY9WTS3'
+PAYPAL_API_SIGNATURE = 'AXEjJsnGKyuWuxuPt4rCEoDJRjKhACThadgdiwX-CcojBwYe.UjG80At'
+# PAYPAL_API_USERNAME = 'canhhs91_api1.gmail.com'
+# PAYPAL_API_PASSWORD = 'QS8S7PCTVJPRJVRB'
+# PAYPAL_API_SIGNATURE = 'ArC72r3j1fs1tcJLuAukRJqngnhVA4uWJKg3LbYxGXZE2Kz25txF.myF'
+PAYPAL_CALLBACK_HTTPS=True
+PAYPAL_SOLUTION_TYPE='Sole'  #does not need create paypal acc
+PAYPAL_LANDING_PAGE = 'Billing'
+PAYPAL_BRAND_NAME = 'Green Point Trees'
+PAYPAL_SANDBOX_MODE=False
+PAYPAL_CURRENCY='USD'
+PAYPAL_LOCALE= 'US'
+# PAYPAL_HEADER_IMG = 'http://www.greenpointtrees.nyc/static/site/img/home-banner.jpg'
+
+THUMBNAIL_FORMAT='PNG'

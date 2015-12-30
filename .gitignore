@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 db.sqlite3
 media
-virtualenv
+venv
 .DS_Store
 __pycache__/
 *.py[cod]
