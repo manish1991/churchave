@@ -890,3 +890,11 @@ div#wowslider-container1 {
 }
 
 .contact .more {z-index: 2;position: relative;}
+
+
+img.sunflower {
+    position: absolute;
+    margin-top: -67px;
+    width: 60px;
+    margin-left: 53px;
+}
