@@ -82,7 +82,7 @@
 
                   {% comment %}
                     {% for i in 'xxxxx' %}
-                  {% thumbnail '/media/images/flower-full-'|add:y|add:'.jpg'|get_path "128x48" crop="center" as im %}
+                  {% thumbnail '/static/images/flower-full-'|add:y|add:'.jpg'|get_path "128x48" crop="center" as im %}
                   <a href="#" title=""><span><img src="{{im.url}}" alt=""/>{{forloop.counter}}</span></a>
                   {% endthumbnail %}
                   {%endwith%}
