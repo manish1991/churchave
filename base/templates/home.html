@@ -74,7 +74,7 @@
 
               <div class="ws_images"><ul>
                 {% for i in 'xxxxx' %}
-                <li><img src="/media/images/flower_{{forloop.counter}}.jpg" alt="" title="" id=""/></li>
+                <li><img src="/static/images/flower-full-{{forloop.counter}}.jpg" alt="" title="" id=""/></li>
                 {%endfor%}
               </ul></div>
               <div class="ws_bullets">
@@ -82,7 +82,7 @@
 
                   {% comment %}
                     {% for i in 'xxxxx' %}
-                  {% thumbnail '/media/images/flower_'|add:y|add:'.jpg'|get_path "128x48" crop="center" as im %}
+                  {% thumbnail '/static/images/flower-full-'|add:y|add:'.jpg'|get_path "128x48" crop="center" as im %}
                   <a href="#" title=""><span><img src="{{im.url}}" alt=""/>{{forloop.counter}}</span></a>
                   {% endthumbnail %}
                   {%endwith%}
