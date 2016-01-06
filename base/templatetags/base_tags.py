@@ -35,7 +35,7 @@ def getlist(query_dict, field):
 
 @register.filter
 def get_path(url):
-    return settings.PROJECT_ROOT + url
+    return str(settings.BASE_DIR) + url
 
 
 

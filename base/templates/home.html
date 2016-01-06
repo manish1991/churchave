@@ -52,613 +52,624 @@
         <!-- Menu Ends -->
 
         <h1>
-        <a href="index.html">
-      Church Avenue
-          <br><span>Florist</span>
-          <img class="sunflower" src="{% static 'images/sunflower.png' %}">
-          
+          <a href="/">
+            Church Avenue
+            <br><span>Florist</span>
+            <img class="sunflower" src="{% static 'images/sunflower.png' %}">
+
           </a>
-          </h1>
+        </h1>
+      </div>
+    </div>
+    <!-- Header Ends! -->
+
+    <!-- Page Content -->
+    <div class="page">
+      <div class="container">
+
+        <!-- Slider -->
+        <div class="promo">
+
+          <div id="wowslider-container1"  class="wowslider-container">
+
+            <div class="ws_images"><ul>
+              {% for i in '12345' %}
+              {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
+              {% thumbnail img_url|get_path "x500" crop="center" as im %}
+              <li><img src="{{im.url}}" alt="" title="" id=""/></li>
+              {% endthumbnail %}
+
+              {%endwith%}
+
+              {%endfor%}
+            </ul></div>
+            <div class="ws_bullets">
+              <div>
+
+
+                {% for i in '12345' %}
+              {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
+              {% thumbnail img_url|get_path "128x48" crop="center" as im %}
+                <a href="#" title=""><span><img src="{{im.url}}" alt=""/>{{forloop.counter}}</span></a>
+              
+              {% endthumbnail %}
+
+              {%endwith%}
+
+              {%endfor%}
+
+                
+
+              </div>
+            </div>
+            <div class="ws_script" style="position:absolute;left:-99%"><a href="/">bootstrap carousel</a> by WOWSlider.com v8.6m</div>
+            <div class="ws_shadow"></div>
+          </div>  
+
+        </div>
+        <!-- Slider Ends! -->
+
+        <!-- Abstract -->
+        <div class="abstract">
+          <a class="anchor" id="about"></a>
+          <p>A unique way to spice up your event with a creative display of custom designed floral arrangements for any occasion.<br><em>Get inspired, take a look at our featured sweets below...</em></p>
+        </div>
+        <!-- Abstract Ends! -->
+
+        <!-- Featured Products -->
+        <div class="products">
+
+          <!-- Product -->
+          <div class="product">
+            <div>
+              <img src="{% static 'images/our-store-thumbnail.jpg'%}" alt="thumbnail-1.jpg">
+              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
+            </div>
+            <h3>Our Store </h3>
+            <p>Conveniently located in the heart of Flatbush Brooklyn easily accessible by mass transit with ample street  parking . </p>
+          </div>
+          <!-- Product Ends! -->
+
+          <!-- Product -->
+          <div class="product">
+            <div>
+              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="thumbnail-2.jpg">
+              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
+            </div>
+            <h3>Our Selection </h3>
+            <p>Large selection of fresh flowers, silk arrangements, blooming plants , chocolates and novelty items.    </p>
+          </div>
+          <!-- Product Ends! -->
+
+          <!-- Product -->
+          <div class="product">
+            <div>
+              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="thumbnail-3.jpg">
+              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
+            </div>
+            <h3>Our Services </h3>
+            <p>Full service florist for all Occasions </p>
+          </div>
+          <!-- Product Ends! -->
+
+        </div>
+        <!-- Featured Products Ends! -->
+
+        <!-- Services -->
+        <div class="services">
+          <a class="anchor" id="services"></a>
+
+          <h2>Our Services</h2>
+          <p class="description">Celebrate your special occasion with us. Weather you're planning for a small or a large event, we will help make it a memorable and beautiful.</p>
+
+          <div class="service">
+            <h3>Service with love</h3>
+            <p>Dedicated florist following famaliy tradition creating floral arrangements for over twenty years   </p>
+          </div>
+
+          <div class="event">
+            <li><a href="">Get Well & New Born  </a></li>
+            <li><a href="">Church Flowers & Funerals </a></li>
+            <li><a href="">Birthdays & Celebrations</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">Online Store </a></li>
+          </ul>
+        </div>
+
+        <div class="delivery">
+          <h3>Speedy delivery</h3>
+          <p>Weater is around the corner or around the world , Church Avenue Florist will arrange pompt delivery with specialty to Downsate and Kings County Medical centers  </p>
         </div>
       </div>
-      <!-- Header Ends! -->
+      <!-- Services Ends! -->
 
-      <!-- Page Content -->
-      <div class="page">
-        <div class="container">
+      <!-- Portfolio -->
+      <div class="portfolio">
+        <a class="anchor" id="portfolio"></a>
 
-          <!-- Slider -->
-          <div class="promo">
+        <h2>Our Portfolio</h2>
 
-            <div id="wowslider-container1"  class="wowslider-container">
+        <!-- Birthdays -->
+        <div class="items levels" data-group="birthdays">
+          <a href="" class="close">close</a>
 
-              <div class="ws_images"><ul>
-                {% for i in 'xxxxx' %}
-                <li><img src="/static/images/flower-full-{{forloop.counter}}.jpg" alt="" title="" id=""/></li>
-                {%endfor%}
-              </ul></div>
-              <div class="ws_bullets">
-                <div>
-
-                  {% comment %}
-                    {% for i in 'xxxxx' %}
-                  {% thumbnail '/static/images/flower-full-'|add:y|add:'.jpg'|get_path "128x48" crop="center" as im %}
-                  <a href="#" title=""><span><img src="{{im.url}}" alt=""/>{{forloop.counter}}</span></a>
-                  {% endthumbnail %}
-                  {%endwith%}
-
-                  {% endfor %}
-                  {% endcomment %}
-                </div>
-              </div>
-              <div class="ws_script" style="position:absolute;left:-99%"><a href="/">bootstrap carousel</a> by WOWSlider.com v8.6m</div>
-              <div class="ws_shadow"></div>
-            </div>  
-
-          </div>
-          <!-- Slider Ends! -->
-
-          <!-- Abstract -->
-          <div class="abstract">
-            <a class="anchor" id="about"></a>
-            <p>A unique way to spice up your event with a creative display of custom designed floral arrangements for any occasion.<br><em>Get inspired, take a look at our featured sweets below...</em></p>
-          </div>
-          <!-- Abstract Ends! -->
-
-          <!-- Featured Products -->
-          <div class="products">
-
-            <!-- Product -->
-            <div class="product">
-              <div>
-                <img src="{% static 'images/our-store-thumbnail.jpg'%}" alt="thumbnail-1.jpg">
-                <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-              </div>
-              <h3>Our Store </h3>
-              <p>Conveniently located in the heart of Flatbush Brooklyn easily accessible by mass transit with ample street  parking . </p>
-            </div>
-            <!-- Product Ends! -->
-
-            <!-- Product -->
-            <div class="product">
-              <div>
-                <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="thumbnail-2.jpg">
-                <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-              </div>
-              <h3>Our Selection </h3>
-              <p>Large selection of fresh flowers, silk arrangements, blooming plants , chocolates and novelty items.    </p>
-            </div>
-            <!-- Product Ends! -->
-
-            <!-- Product -->
-            <div class="product">
-              <div>
-                <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="thumbnail-3.jpg">
-                <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-              </div>
-              <h3>Our Services </h3>
-              <p>Full service florist for all Occasions </p>
-            </div>
-            <!-- Product Ends! -->
-
-          </div>
-          <!-- Featured Products Ends! -->
-
-          <!-- Services -->
-          <div class="services">
-            <a class="anchor" id="services"></a>
-
-            <h2>Our Services</h2>
-            <p class="description">Celebrate your special occasion with us. Weather you're planning for a small or a large event, we will help make it a memorable and beautiful.</p>
-
-            <div class="service">
-              <h3>Service with love</h3>
-              <p>Dedicated florist following famaliy tradition creating floral arrangements for over twenty years   </p>
-            </div>
-
-            <div class="event">
-              <li><a href="">Get Well & New Born  </a></li>
-              <li><a href="">Church Flowers & Funerals </a></li>
-              <li><a href="">Birthdays & Celebrations</a></li>
-              <li><a href="">Weddings</a></li>
-              <li><a href="">Online Store </a></li>
-            </ul>
+          <div>
+            <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-1.jpg'%}"></a>
           </div>
 
-          <div class="delivery">
-            <h3>Speedy delivery</h3>
-            <p>Weater is around the corner or around the world , Church Avenue Florist will arrange pompt delivery with specialty to Downsate and Kings County Medical centers  </p>
-          </div>
-        </div>
-        <!-- Services Ends! -->
-
-        <!-- Portfolio -->
-        <div class="portfolio">
-          <a class="anchor" id="portfolio"></a>
-
-          <h2>Our Portfolio</h2>
-
-          <!-- Birthdays -->
-          <div class="items levels" data-group="birthdays">
-            <a href="" class="close">close</a>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-4.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-5.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/church-full-6.jpg'%}"></a>
-            </div>
-
-          </div>
-          <!-- Birthdays Ends! -->
-
-          <!-- Weddings -->
-          <div class="items levels" data-group="weddings">
-            <a href="" class="close">close</a>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-4.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-5.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/church-full-6.jpg'%}"></a>
-            </div>
-
-          </div>
-          <!-- Weddings Ends! -->
-
-          <!-- Showers -->
-          <div class="items levels" data-group="showers">
-            <a href="" class="close">close</a>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-4.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-5.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/church-full-6.jpg'%}"></a>
-            </div>
-
-          </div>
-          <!-- Showers Ends! -->
-
-          <!-- Parties -->
-          <div class="items levels" data-group="parties">
-            <a href="" class="close">close</a>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-4.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-5.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/church-full-6.jpg'%}"></a>
-            </div>
-
-          </div>
-          <!-- Parties Ends! -->
-
-          <!-- Corporate -->
-          <div class="items levels" data-group="corporate">
-            <a href="" class="close">close</a>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-4.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-5.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/church-full-6.jpg'%}"></a>
-            </div>
-
-          </div>
-          <!-- Corporate Ends! -->
-
-          <!-- Celebrations -->
-          <div class="items levels" data-group="celebrations">
-            <a href="" class="close">close</a>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-1.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-2.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-3.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-4.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/flower-full-5.jpg'%}"></a>
-            </div>
-
-            <div>
-              <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-              <a href="{% static 'images/church-full-6.jpg'%}"></a>
-            </div>
-
-          </div>
-          <!-- Celebrations Ends! -->
-
-          <!-- Portfolio List -->
-          <div class="item">
-            <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="" data-group="birthdays"><span>Mixed Flowers</span></a>
+          <div>
+            <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-2.jpg'%}"></a>
           </div>
 
-          <div class="item">
-            <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="" data-group="weddings"><span>Roses</span></a>
+          <div>
+            <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-3.jpg'%}"></a>
           </div>
 
-          <div class="item">
-            <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="" data-group="showers"><span>Hospitals</span></a>
+          <div>
+            <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-4.jpg'%}"></a>
           </div>
 
-          <div class="item">
-            <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="" data-group="parties"><span>Birthdays</span></a>
+          <div>
+            <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-5.jpg'%}"></a>
           </div>
 
-          <div class="item">
-            <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="" data-group="corporate "><span>Church  & Funerals</span></a>
+          <div>
+            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/church-full-6.jpg'%}"></a>
           </div>
-
-          <div class="item">
-            <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="" data-group="celebrations"><span>Weddings</span></a>
-          </div>
-          <!-- Portfolio List Ends! -->
 
         </div>
-        <!-- Portfolio Ends! -->
+        <!-- Birthdays Ends! -->
 
-        <!-- Team -->
-        <div class="team">
-          <h2>Meet the team</h2>
+        <!-- Weddings -->
+        <div class="items levels" data-group="weddings">
+          <a href="" class="close">close</a>
 
-          <!-- Member -->
           <div>
-            <img src="{% static 'images/team-member-1.png'%}" alt="team-member-name1">
-            <h3>Johnny V.</h3>
-            <p><em>Making Beautiful   <span>Floral Arrangements  </span></em></p>
-            <p><strong>Floral Designer  </strong></p>
-            <ul>
-              <li><a href="" class="google">google+</a></li>
-              <li><a href="" class="linkedin">linkedin</a></li>
-              <li><a href="" class="twitter">twitter</a></li>
-              <li><a href="" class="facebook">facebook</a></li>
-            </ul>
+            <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-1.jpg'%}"></a>
           </div>
-          <!-- Member Ends! -->
 
-          <!-- Member -->
           <div>
-            <img src="{% static 'images/team-member-2.png'%}" alt="team-member-name2">
-            <h3>Nick V.</h3>
-            <p><em>Making Beautiful <span>Floral Arragments </span></em></p>
-            <p><strong>Floral Designer </strong></p>
-            <ul>
-              <li><a href="" class="google">google+</a></li>
-              <li><a href="" class="linkedin">linkedin</a></li>
-              <li><a href="" class="twitter">twitter</a></li>
-              <li><a href="" class="facebook">facebook</a></li>
-              <li><a href="" class="pinterest">pinterest</a></li>
-              <li><a href="" class="instagram">instagram</a></li>
-            </ul>
+            <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-2.jpg'%}"></a>
           </div>
-          <!-- Member Ends! -->
 
-          <!-- Member -->
           <div>
-            <img src="{% static 'images/team-member-3.png'%}" alt="team-member-name3">
-            <h3>Jane Doe</h3>
-            <p><em>Favorite dessert <span>chocolate cookies</span></em></p>
-            <p><strong>food stylist</strong></p>
-            <ul>
-              <li><a href="" class="google">google+</a></li>
-              <li><a href="" class="linkedin">linkedin</a></li>
-              <li><a href="" class="twitter">twitter</a></li>
-              <li><a href="" class="facebook">facebook</a></li>
-              <li><a href="" class="instagram">instagram</a></li>
-            </ul>
+            <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-3.jpg'%}"></a>
           </div>
-          <!-- Member Ends! -->
 
-          <!-- Member -->
           <div>
-            <img src="{% static 'images/team-member-4.png'%}" alt="team-member-name4">
-            <h3>Mary Brown</h3>
-            <p><em>Favorite dessert <span>macarons</span></em></p>
-            <p><strong>CEO</strong></p>
-            <ul>
-              <li><a href="" class="google">google+</a></li>
-              <li><a href="" class="linkedin">linkedin</a></li>
-              <li><a href="" class="twitter">twitter</a></li>
-              <li><a href="" class="facebook">facebook</a></li>
-            </ul>
+            <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-4.jpg'%}"></a>
           </div>
-          <!-- Member Ends! -->
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-5.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/church-full-6.jpg'%}"></a>
+          </div>
 
         </div>
-        <!-- Team Ends! -->
+        <!-- Weddings Ends! -->
 
-        <!-- Map -->
-        <div class="map">
-          <div id="map_canvas"></div>
+        <!-- Showers -->
+        <div class="items levels" data-group="showers">
+          <a href="" class="close">close</a>
 
-          <div class="address">
-            <div>
-              <h3>Find Us</h3>
-              <h4>Churchave Florist</h4>
-              <p>3206 Church Avenue,<br>Brooklyn<br>New York 11226<br><strong>Phone: (718) 282-4100</strong></p>
-            </div>
+          <div>
+            <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-1.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-2.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-3.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-4.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-5.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/church-full-6.jpg'%}"></a>
+          </div>
+
+        </div>
+        <!-- Showers Ends! -->
+
+        <!-- Parties -->
+        <div class="items levels" data-group="parties">
+          <a href="" class="close">close</a>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-1.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-2.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-3.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-4.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-5.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/church-full-6.jpg'%}"></a>
+          </div>
+
+        </div>
+        <!-- Parties Ends! -->
+
+        <!-- Corporate -->
+        <div class="items levels" data-group="corporate">
+          <a href="" class="close">close</a>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-1.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-2.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-3.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-4.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-5.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/church-full-6.jpg'%}"></a>
+          </div>
+
+        </div>
+        <!-- Corporate Ends! -->
+
+        <!-- Celebrations -->
+        <div class="items levels" data-group="celebrations">
+          <a href="" class="close">close</a>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-1.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-1.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-2.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-2.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-3.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-3.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-4.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-4.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/flower-thumbnail-5.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/flower-full-5.jpg'%}"></a>
+          </div>
+
+          <div>
+            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/church-full-6.jpg'%}"></a>
+          </div>
+
+        </div>
+        <!-- Celebrations Ends! -->
+
+        <!-- Portfolio List -->
+        <div class="item">
+          <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
+          <a href="" data-group="birthdays"><span>Mixed Flowers</span></a>
+        </div>
+
+        <div class="item">
+          <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
+          <a href="" data-group="weddings"><span>Roses</span></a>
+        </div>
+
+        <div class="item">
+          <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
+          <a href="" data-group="showers"><span>Hospitals</span></a>
+        </div>
+
+        <div class="item">
+          <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
+          <a href="" data-group="parties"><span>Birthdays</span></a>
+        </div>
+
+        <div class="item">
+          <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
+          <a href="" data-group="corporate "><span>Church  & Funerals</span></a>
+        </div>
+
+        <div class="item">
+          <img src="{% static 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
+          <a href="" data-group="celebrations"><span>Weddings</span></a>
+        </div>
+        <!-- Portfolio List Ends! -->
+
+      </div>
+      <!-- Portfolio Ends! -->
+
+      <!-- Team -->
+      <div class="team">
+        <h2>Meet the team</h2>
+
+        <!-- Member -->
+        <div>
+          <img src="{% static 'images/team-member-1.png'%}" alt="team-member-name1">
+          <h3>Johnny V.</h3>
+          <p><em>Making Beautiful   <span>Floral Arrangements  </span></em></p>
+          <p><strong>Floral Designer  </strong></p>
+          <ul>
+            <li><a href="" class="google">google+</a></li>
+            <li><a href="" class="linkedin">linkedin</a></li>
+            <li><a href="" class="twitter">twitter</a></li>
+            <li><a href="" class="facebook">facebook</a></li>
+          </ul>
+        </div>
+        <!-- Member Ends! -->
+
+        <!-- Member -->
+        <div>
+          <img src="{% static 'images/team-member-2.png'%}" alt="team-member-name2">
+          <h3>Nick V.</h3>
+          <p><em>Making Beautiful <span>Floral Arragments </span></em></p>
+          <p><strong>Floral Designer </strong></p>
+          <ul>
+            <li><a href="" class="google">google+</a></li>
+            <li><a href="" class="linkedin">linkedin</a></li>
+            <li><a href="" class="twitter">twitter</a></li>
+            <li><a href="" class="facebook">facebook</a></li>
+            <li><a href="" class="pinterest">pinterest</a></li>
+            <li><a href="" class="instagram">instagram</a></li>
+          </ul>
+        </div>
+        <!-- Member Ends! -->
+
+        <!-- Member -->
+        <div>
+          <img src="{% static 'images/team-member-3.png'%}" alt="team-member-name3">
+          <h3>Jane Doe</h3>
+          <p><em>Favorite dessert <span>chocolate cookies</span></em></p>
+          <p><strong>food stylist</strong></p>
+          <ul>
+            <li><a href="" class="google">google+</a></li>
+            <li><a href="" class="linkedin">linkedin</a></li>
+            <li><a href="" class="twitter">twitter</a></li>
+            <li><a href="" class="facebook">facebook</a></li>
+            <li><a href="" class="instagram">instagram</a></li>
+          </ul>
+        </div>
+        <!-- Member Ends! -->
+
+        <!-- Member -->
+        <div>
+          <img src="{% static 'images/team-member-4.png'%}" alt="team-member-name4">
+          <h3>Mary Brown</h3>
+          <p><em>Favorite dessert <span>macarons</span></em></p>
+          <p><strong>CEO</strong></p>
+          <ul>
+            <li><a href="" class="google">google+</a></li>
+            <li><a href="" class="linkedin">linkedin</a></li>
+            <li><a href="" class="twitter">twitter</a></li>
+            <li><a href="" class="facebook">facebook</a></li>
+          </ul>
+        </div>
+        <!-- Member Ends! -->
+
+      </div>
+      <!-- Team Ends! -->
+
+      <!-- Map -->
+      <div class="map">
+        <div id="map_canvas"></div>
+
+        <div class="address">
+          <div>
+            <h3>Find Us</h3>
+            <h4>Churchave Florist</h4>
+            <p>3206 Church Avenue,<br>Brooklyn<br>New York 11226<br><strong>Phone: (718) 282-4100</strong></p>
           </div>
         </div>
-        <!-- Map Ends! -->
+      </div>
+      <!-- Map Ends! -->
 
-        <!-- Contact -->
-        <div class="contact">
-          <a class="anchor" id="contact"></a>
+      <!-- Contact -->
+      <div class="contact">
+        <a class="anchor" id="contact"></a>
 
-          <!-- Contact Form -->
-          
-          <!-- Contact Form Ends! -->
+        <!-- Contact Form -->
 
-          <!-- More -->
-          <div class="more">
-            
-            <div class="alotoftext">
-              <div id="int-wrapper-ws">
-                
+        <!-- Contact Form Ends! -->
 
+        <!-- More -->
+        <div class="more">
 
-                
+          <div class="alotoftext">
+            <div id="int-wrapper-ws">
 
 
 
-                
-                
-                
 
 
 
-                
-                <div class="int-section">
-                  <div class="int-section-title" style="background-color: #d5de91;">
-                    <a name="1" style="color: #737d23;"><p>About The Company</p></a>
-                  </div>
-                  <div class="int-section-content">
-                   Church Avenue  Florist has been proudly serving the Brooklyn area. We are family owned and operated. We are committed to offering only the finest floral arrangements and gifts, backed by service that is friendly and prompt. Because all of our customers are important, our professional staff is dedicated to making your experience a pleasant one. That is why we always go the extra mile to make your floral gift perfect.<br>
-
-                   Let Church Avenue Florist be your first choice for flowers.
 
 
-                   <p></p>
-                   
-                 </div>
-                 
-               </div>
-               
-               
-               <div class="int-section">
+
+
+
+
+
+
+              <div class="int-section">
                 <div class="int-section-title" style="background-color: #d5de91;">
-                  <a name="2" style="color: #737d23;"><p>Store Hours</p></a>
+                  <a name="1" style="color: #737d23;"><p>About The Company</p></a>
                 </div>
                 <div class="int-section-content">
-                 Our shop is open from 9:00 a.m. to 8:00 p.m., Monday through Saturday and from 9:00 a.m. to 5:00 p.m. on Sunday.<br>
-                 <br><br> To help assure on-time delivery during the busy holiday season, place your order at least 2 days prior to the following major holidays: Thanksgiving Day, Christmas Day, New Year's Day, Valentine's Day, Easter, Administrative Professionals Week, Mother's Day, Memorial Day, Father's Day, Independence Day and Labor Day.<br>
-                 Our shop is open 365 days a year.
+                 Church Avenue  Florist has been proudly serving the Brooklyn area. We are family owned and operated. We are committed to offering only the finest floral arrangements and gifts, backed by service that is friendly and prompt. Because all of our customers are important, our professional staff is dedicated to making your experience a pleasant one. That is why we always go the extra mile to make your floral gift perfect.<br>
+
+                 Let Church Avenue Florist be your first choice for flowers.
+
+
                  <p></p>
-                 
+
                </div>
-               
+
              </div>
-             
-             
-             
-             
-             
+
+
              <div class="int-section">
               <div class="int-section-title" style="background-color: #d5de91;">
-                <a name="4" style="color: #737d23;"><p>Areas Served</p></a>
+                <a name="2" style="color: #737d23;"><p>Store Hours</p></a>
               </div>
               <div class="int-section-content">
-               Our shop serves the following areas:Brooklyn
+               Our shop is open from 9:00 a.m. to 8:00 p.m., Monday through Saturday and from 9:00 a.m. to 5:00 p.m. on Sunday.<br>
+               <br><br> To help assure on-time delivery during the busy holiday season, place your order at least 2 days prior to the following major holidays: Thanksgiving Day, Christmas Day, New Year's Day, Valentine's Day, Easter, Administrative Professionals Week, Mother's Day, Memorial Day, Father's Day, Independence Day and Labor Day.<br>
+               Our shop is open 365 days a year.
                <p></p>
-               <table class="HELVTXT" cellpadding="3" cellspacing="4" border="0"><tbody><tr><td><b>We also deliver to the following facilities</b></td></tr><tr><td>A Barrett Funeral Svc Inc     </td><td>A Carter Green Funeral Svc    </td></tr><tr><td>A John Nicelli                </td><td>A Vigliante &amp; Sons Inc        </td></tr><tr><td>Abramo Funeral Home Inc       </td><td>Adath Isreal Of Brooklyn Inc  </td></tr><tr><td>Aishel Avraham Health Facility</td><td>Albany Medical Ctr            </td></tr><tr><td>All Faiths Burial &amp; Cremation </td><td>Allen Health Care Svc Inc     </td></tr><tr><td>Alphonso A Brown              </td><td>Amato &amp; Marasco Funeral Svc   </td></tr><tr><td>Amato &amp; Marasco Funeral Svc Co</td><td>Andrew Torregrossa &amp; Sons Inc </td></tr><tr><td>Anthony A Pastorelli Funeral  </td><td>Anthony Sconzo Funeral Home   </td></tr><tr><td>Armstrong Funeral Home Inc    </td><td>Arthur Brown &amp; Son Inc Funeral</td></tr><tr><td>Arthur's Funeral Home Inc     </td><td>Ateret Avot Of Midwood        </td></tr><tr><td>Augustana Lutheran Home       </td><td>B Anastasio &amp; Son Inc         </td></tr><tr><td>Bais Hachaim Chapels          </td><td>Basile Funeral Home Inc       </td></tr><tr><td>Bay Park Medical              </td><td>Bay Ridge Family Health Ctr   </td></tr><tr><td>Bay Ridge Korean Health Ctr   </td><td>Benjamin E Robinson Funeral   </td></tr><tr><td>Benjmain Robinson Funeral     </td><td>Bensonhurst Prospero &amp; Son Inc</td></tr><tr><td>Beth Israel Med Center-Kings  </td><td>Bethany Methodist Home Inc    </td></tr><tr><td>Bikur Cholim Of Sea Gate      </td><td>Bishop Henry B Hucles Nurs Hm </td></tr><tr><td>Bishop Maguvero Ctr-Geriatric </td><td>Blair-Mazzarella Funeral Home </td></tr><tr><td>Blizinski Funeral Home Inc    </td><td>Borinquen Memorial Fnrl Home  </td></tr><tr><td>Boro Park Primary Care Clinic </td><td>Boulevard Riverside Chapels   </td></tr><tr><td>Boulevard-Park West Chapels   </td><td>Brettschneider Funeral Home   </td></tr><tr><td>Brighton Funeral Bureau       </td><td>Brizzi Funeral Home           </td></tr><tr><td>Brookdale Hospital Med Ctr    </td><td>Brooklyn Chinese Family Health</td></tr><tr><td>Brooklyn Endoscopy &amp; Amsurg   </td><td>Brooklyn Family Medical Assoc </td></tr><tr><td>Brooklyn Hospital Center      </td><td>Brooklyn Hospital Ctr         </td></tr><tr><td>Brooklyn Jewish Hospital Mntnc</td><td>Brooklyn Manor Home For Adults</td></tr><tr><td>Brooklyn Methodist Church Home</td><td>Brooklyn Queens Nursing Home  </td></tr><tr><td>Brooklyn Spine &amp; Arthritis Ctr</td><td>Brooklyn Women's Svc          </td></tr><tr><td>Brown's Funeral Home          </td><td>Buena Vida Nursing Home       </td></tr><tr><td>Cabs Nursing Home Co          </td><td>Calvary Hospital              </td></tr><tr><td>Calvin P Parker Funeral Chapel</td><td>Campanaro Falletta Funeral Hm </td></tr><tr><td>Capital Funeral Homes Inc     </td><td>Caribbean American Family Hlth</td></tr><tr><td>Castle Senior Living-Prospect </td><td>Catholic Charities Diocese    </td></tr><tr><td>Catholic Medical Ctr-Brooklyn </td><td>Caton Park Nursing Home       </td></tr><tr><td>Center For Child Development  </td><td>Center For Dialysis-Parkside  </td></tr><tr><td>Center For Healthcare Svc     </td><td>Ceraso Gennarelli Funeral Home</td></tr><tr><td>Charles Drew Clinic           </td><td>Charles H Mike Funeral Home   </td></tr><tr><td>Chevra Kadisha Prushim Genera </td><td>Chevra Kadisha Somrei Hachomos</td></tr><tr><td>Cleveland R Vaughan Funeral Hm</td><td>Clifford N Branch Sr          </td></tr><tr><td>Cnr Alzheimer's Adult Day     </td><td>Cobble Hill Chapels           </td></tr><tr><td>Cobble Hill Nursing Home      </td><td>Concord Nursing Home Telephone</td></tr><tr><td>Coney Island Hospital         </td><td>Constantinides Funeral Parlor </td></tr><tr><td>Coromilas Funeral Chapel Inc  </td><td>Court Street Funeral Home Inc </td></tr><tr><td>Cremation Consultants         </td><td>Cumberland Hospital           </td></tr><tr><td>Cusimano &amp; Russo Inc          </td><td>Cypress Hills Cemetery        </td></tr><tr><td>D K Robeson Ej Simms Funeral  </td><td>D'arienzo Funeral Home Inc    </td></tr><tr><td>Dahill Funeral Home           </td><td>Daniel George &amp; Son Fnrl Home </td></tr><tr><td>Daniel Jean Frantz Funeral Svc</td><td>David Lane &amp; Floyd Gilmore    </td></tr><tr><td>David Lane Funeral Parlor Inc </td><td>De Kalb Funeral Svc           </td></tr><tr><td>De Riso Funeral Home Inc      </td><td>Ditmas Park Care Ctr          </td></tr><tr><td>Donnelly &amp; Purcell Funeral Inc</td><td>E &amp; C Owens Memorial Chapels  </td></tr><tr><td>Edward Hc Dunn Inc            </td><td>Edward J Robeson Funeral Home </td></tr><tr><td>Edwards C Halvorsen Inc       </td><td>English Brothers Funeral Home </td></tr><tr><td>Erskine Funeral Home Inc      </td><td>Evergreen Funeral Home Inc    </td></tr><tr><td>F G Guido Funeral Home Inc    </td><td>Fairhaven Funeral Chapel Inc  </td></tr><tr><td>Family Funeral Svc Inc        </td><td>Family Health Ctr             </td></tr><tr><td>Family Health Ctr Network     </td><td>Family Health Svc             </td></tr><tr><td>Family Physician Health Ctr   </td><td>Four Seasons Nursing &amp; Rehab  </td></tr><tr><td>Frank J Barone Inc            </td><td>Frank R Bell Funeral Home Inc </td></tr><tr><td>Frantz Daniel Jean Funeral Svc</td><td>Funeraria Hermanos Inc        </td></tr><tr><td>Funeraria La Fe Inc           </td><td>Future Care Consultants       </td></tr><tr><td>Gamble Funeral Home Inc       </td><td>Garden Of Eden Home For Adults</td></tr><tr><td>Garlick Kirschenbaum Chapels  </td><td>Geri-Care Systems Inc         </td></tr><tr><td>Gomez Funeral Home Inc        </td><td>Goodwin Place Operations      </td></tr><tr><td>Grace Funeral Chapels         </td><td>Greenpark Care Ctr            </td></tr><tr><td>Greenpoint Chapels Ltd        </td><td>Greenpoint Pediatrics         </td></tr><tr><td>Guarino Funeral Home Inc      </td><td>Gutterman's Inc               </td></tr><tr><td>Haber House Senior Ctr        </td><td>Harbor View                   </td></tr><tr><td>Harvey's Funeral Svc Inc      </td><td>Healthy Connection            </td></tr><tr><td>Heights &amp; Hill Funeral Home   </td><td>Hellenic Memorial Chapel Inc  </td></tr><tr><td>Henry Mc Caddin &amp; Son Inc     </td><td>Herbst Trzaska Waldeck Chapels</td></tr><tr><td>Herbst-Schaefer-Waldeck Chapel</td><td>Holy Family Home              </td></tr><tr><td>House Of Hills Inc            </td><td>Hugh A Reid Inc               </td></tr><tr><td>I J Morris Inc                </td><td>Interboro Funeral Svc         </td></tr><tr><td>Interfaith Medical Ctr        </td><td>Irving Sherman                </td></tr><tr><td>Islamic Funeral Svc Inc       </td><td>Island Rehabilitative Svc     </td></tr><tr><td>J Jose Spencer Mortician Inc  </td><td>James F Smallman              </td></tr><tr><td>James H Willie Funeral Home   </td><td>James P Byrnes Funeral Home   </td></tr><tr><td>James W Robinson Funeral Home </td><td>Jch-Maimonides Health &amp; Wlns  </td></tr><tr><td>Jere J Cronin Inc             </td><td>Jnj Home Health Aid Agency    </td></tr><tr><td>John J Healey Funeral Home Inc</td><td>John J Mc Manus &amp; Sons Inc    </td></tr><tr><td>John's Funeral Home           </td><td>Joseph Cottone Funeral Svc    </td></tr><tr><td>Joseph G Duffy Inc            </td><td>Joseph P Clavin Sons Inc      </td></tr><tr><td>Joseph Tari Funeral Home      </td><td>Joseph V Sessa Funeral Home   </td></tr><tr><td>Jurek Park Slope Funeral Home </td><td>Kehila Chapels Inc            </td></tr><tr><td>Kenneth R Johnson Funeral Svc </td><td>Kings County Hospital         </td></tr><tr><td>Kingsboro Psychiatric Ctr     </td><td>Kingsbrook Jewish Medical Ctr </td></tr><tr><td>Kirschenbaum Brothers Inc     </td><td>L J Armistead Funeral Svc     </td></tr><tr><td>La Providencia Family Health  </td><td>Lamesta Funeral Home          </td></tr><tr><td>Las Rosas Funeral Home Inc    </td><td>Lawrence H Woodward Funeral Hm</td></tr><tr><td>Lemberg Home &amp; Geriatric Inst </td><td>Leon W Brown Funeral Inc      </td></tr><tr><td>Leone Funeral Home Inc        </td><td>Lewis Funeral Svc             </td></tr><tr><td>Liberty Trade Svc             </td><td>Lifespire                     </td></tr><tr><td>Lockwood Funeral Home         </td><td>Long Island College Hospital  </td></tr><tr><td>Long Island Out Patient Clinic</td><td>Louis Biundo Funeral Svc      </td></tr><tr><td>Louis De Luca Mayflower Home  </td><td>Louis Tommaso Inc             </td></tr><tr><td>Lucas Stobierski Gardenview   </td><td>Lutheran Medical Ctr          </td></tr><tr><td>M J Smith Sons Inc            </td><td>Maalin &amp; Bakodesh             </td></tr><tr><td>Magical Years Early Childhood </td><td>Maimonides Bay Ridge Primary  </td></tr><tr><td>Maimonides Cardiac Rehab      </td><td>Maimonides Children's Svc     </td></tr><tr><td>Maimonides Greenpoint Pediatrc</td><td>Maimonides Med Ctr-Physical   </td></tr><tr><td>Maimonides Medical Ctr        </td><td>Maimonides Pediatric &amp; Family </td></tr><tr><td>Maimonides Primary Health Svc </td><td>Maimonides Women's Health Svc </td></tr><tr><td>Majestic Funeral Svc          </td><td>Manhattan Avenue Family Health</td></tr><tr><td>Marcus Garvey Nursing Home    </td><td>Marine Park Funeral Home      </td></tr><tr><td>Marine Park Funeral Home Inc  </td><td>Matteo Guarino                </td></tr><tr><td>Matthew Barrett-Rs Saunders   </td><td>Mayflower Funeral Home        </td></tr><tr><td>Mc Laughlin &amp; Sons Inc        </td><td>Mc Millan Funeral Chapel Inc  </td></tr><tr><td>Memorial &amp; Funeral Group      </td><td>Menorah Home &amp; Hospital       </td></tr><tr><td>Menorah Home Hosp Aged And Inf</td><td>Merritt Green &amp; Jefferson Fnrl</td></tr><tr><td>Metropolitan Jewish Health    </td><td>Micahel Madonick              </td></tr><tr><td>Michael De Luca Funeral Home  </td><td>Michael Madonick Funeral Dir  </td></tr><tr><td>Michael V Cosgrove &amp; Son Inc  </td><td>Midwood Memorial Chapel Inc   </td></tr><tr><td>Miles Funeral Home Inc        </td><td>Miraglia Funeral Chapels Inc  </td></tr><tr><td>Mjg Nursing Home Co           </td><td>Mmc Hematology-Oncology       </td></tr><tr><td>Molinari Funeral Directors    </td><td>Morris Ij Inc                 </td></tr><tr><td>N Y City Health &amp; Hospital    </td><td>N Y Funeral Svc Co            </td></tr><tr><td>Nagel Funeral Home Inc        </td><td>Neighborhood Medical Care     </td></tr><tr><td>Nevsky Memorial Chapels       </td><td>New York Community Hospital   </td></tr><tr><td>New York Congregational Ctr   </td><td>New York Methodist Family Hlth</td></tr><tr><td>New York Methodist Healthcente</td><td>New York Methodist Hospital   </td></tr><tr><td>New York Methodist Mri Ctr    </td><td>Norman L Jeffer Community Chpl</td></tr><tr><td>Northern Manor Geriatric Ctr  </td><td>Norwegian Christian Home      </td></tr><tr><td>Nychhc Brooklyn Long Term     </td><td>Nychhc Kings Co Hospital      </td></tr><tr><td>Nym Foot &amp; Ankle Ctr          </td><td>Oasis Funeral Svc             </td></tr><tr><td>Ocean Parkway Pediatric Group </td><td>Orlando Funeral Home          </td></tr><tr><td>Ortiz Funeral Home            </td><td>Oxford Nursing Home Inc       </td></tr><tr><td>Paccione Funeral Directors Inc</td><td>Palm Beach Home For Adults    </td></tr><tr><td>Palm Gardens Nursing Home     </td><td>Palm Tree Nursing Home        </td></tr><tr><td>Park Avenue Funeral Home      </td><td>Park Manor Home For Adults    </td></tr><tr><td>Park Ridge Family Health Ctr  </td><td>Park Shore Health Care Ctr    </td></tr><tr><td>Park Slope Family Health Ctr  </td><td>Parkshore Health Care Ctr     </td></tr><tr><td>Pavone Funeral Home           </td><td>Peter C Labella Funeral Chapel</td></tr><tr><td>Peter P Dohanich Funeral Home </td><td>Pierre Toussaint              </td></tr><tr><td>Piros Nicola Sons Inc         </td><td>Pitta Funeral Home Inc        </td></tr><tr><td>Ponce Funeral Home Inc        </td><td>Ponce Funeral Homes Inc       </td></tr><tr><td>Project Reach Wodhull Med Ctr </td><td>Prospect Park Nursing Home    </td></tr><tr><td>R G Ortiz Funeral Home Inc    </td><td>R Steven Legall Funeral Svc   </td></tr><tr><td>Raccuglia &amp; Son Funeral Home  </td><td>Ralph Aievoli &amp; Son Inc       </td></tr><tr><td>Raymond L Meachem Sr. Funeral </td><td>Regional Funeral Service      </td></tr><tr><td>Ridgewood Bushwick Senior Citi</td><td>River Manor Care Center       </td></tr><tr><td>Robert F Cranford Funeral Home</td><td>Ruby Weston Manor             </td></tr><tr><td>Sabatino Funeral Home Inc     </td><td>Sampson &amp; Willie Funeral      </td></tr><tr><td>Sampson Funeral Service       </td><td>San Juan Memorial Chapel      </td></tr><tr><td>Saraceno Funeral Homes Inc    </td><td>Scarpaci Funeral Home Inc     </td></tr><tr><td>Schaefer Funeral Parlors      </td><td>Schulman &amp; Schachne Institute </td></tr><tr><td>Scotto Funeral Home Inc       </td><td>Sea Bay Manor Home For Adults </td></tr><tr><td>Sea Crest Health Care Center  </td><td>Seaport Manor Rest Home       </td></tr><tr><td>Senko Funeral Home            </td><td>Sephardic Home For Aged Inc   </td></tr><tr><td>Sheepshead Bay Nursing Home   </td><td>Sheepshead Bay Women's Care   </td></tr><tr><td>Sheepshead Nursing Home       </td><td>Sherman Funeral Home Inc      </td></tr><tr><td>Shore Road Family Health      </td><td>Shore View Nursing Home       </td></tr><tr><td>Shorefront Jewish Geriatric   </td><td>Silver Manor Funeral Service  </td></tr><tr><td>Sister Thea Bowman Family     </td><td>South Beach Park Manor        </td></tr><tr><td>South Shore Manor Home-Adults </td><td>St Francis Assisi Family Hlth </td></tr><tr><td>St Joachim &amp; Anne Residences  </td><td>St John's Episcopal Hospital  </td></tr><tr><td>St Martin De Porres Substance </td><td>St Mary's Ambulatary Care Ctr </td></tr><tr><td>St Mary's Continuing Day      </td><td>St Mary's Hospital            </td></tr><tr><td>St Mary's Hospital-Wic Program</td><td>St Nicholas Home              </td></tr><tr><td>St Nicholas Home Inc          </td><td>St Vincent's Catholic Med Ctr </td></tr><tr><td>St Vincent's Svc Inc          </td><td>State University Hospital     </td></tr><tr><td>Staten Island University Hops </td><td>Staten Island University Hosp </td></tr><tr><td>Steven V Fortunato Funeral    </td><td>Sunrise Assisted Living       </td></tr><tr><td>Sunrise Assisted Living-Mill  </td><td>Sunset Park Family Ctr-Wic    </td></tr><tr><td>Sunset Terrace Wic Program    </td><td>Surf Manor                    </td></tr><tr><td>Thomas F Russo &amp; Son          </td><td>Trzaska Funeral Home Inc      </td></tr><tr><td>Turning Point                 </td><td>Unity Funeral Chapels Inc     </td></tr><tr><td>University Hopital Of Brooklyn</td><td>University Hosp Billing Office</td></tr><tr><td>Us Veterans Affairs Med Ctr   </td><td>Vance R Jorsling Chapels Inc  </td></tr><tr><td>Victory Memorial Hospital     </td><td>Wan Shou Funeral Svc          </td></tr><tr><td>Warbasse Geriactics Office    </td><td>Wartburg Lutheran Home        </td></tr><tr><td>Watkins Funeral Home          </td><td>West End Funeral Chapel       </td></tr><tr><td>West End Gardens Hdf Co       </td><td>White Memorial Chapels Inc    </td></tr><tr><td>Wic Program Maimonides Ctr    </td><td>Willadean W Turner Funeral Svc</td></tr><tr><td>Williamsburg Family Health Ctr</td><td>Willoughby Nursing Home       </td></tr><tr><td>Woodhull Medical Group        </td><td>Woodside Funeral Home         </td></tr><tr><td>Wyckoff Heights Medical Ctr   </td><td>Yablokoff Kingsway Memorial   </td></tr><tr><td>Yereim Orthodox Chapel        </td><td></td></tr></tbody></table>
+
              </div>
-             
+
            </div>
-           
-           
+
+
+
+
+
            <div class="int-section">
             <div class="int-section-title" style="background-color: #d5de91;">
-              <a name="5" style="color: #737d23;"><p>Specialty Services</p></a>
+              <a name="4" style="color: #737d23;"><p>Areas Served</p></a>
             </div>
             <div class="int-section-content">
-             We specialize in the following services:<br><br>
-             -Large inventory of fresh flowers<br>
-             -Tropicals<br>
-             -Plants<br>
-             -European/dish gardens<br>
-             -Contemporary and traditional arrangements<br>
-             -High-style floral arrangements<br>
-             -Silk arrangements<br>
-             -Dried floral arrangements<br>
-             -Weddings<br>
-             -Funeral designs<br>
-             -Extensive gift line<br>
-             -Gourmet and fruit baskets<br>
-             -Gift baskets<br>
-             -Greeting cards<br>
-             -Candles<br>
-
-
-
+             Our shop serves the following areas:Brooklyn
              <p></p>
-             
+             <table class="HELVTXT" cellpadding="3" cellspacing="4" border="0"><tbody><tr><td><b>We also deliver to the following facilities</b></td></tr><tr><td>A Barrett Funeral Svc Inc     </td><td>A Carter Green Funeral Svc    </td></tr><tr><td>A John Nicelli                </td><td>A Vigliante &amp; Sons Inc        </td></tr><tr><td>Abramo Funeral Home Inc       </td><td>Adath Isreal Of Brooklyn Inc  </td></tr><tr><td>Aishel Avraham Health Facility</td><td>Albany Medical Ctr            </td></tr><tr><td>All Faiths Burial &amp; Cremation </td><td>Allen Health Care Svc Inc     </td></tr><tr><td>Alphonso A Brown              </td><td>Amato &amp; Marasco Funeral Svc   </td></tr><tr><td>Amato &amp; Marasco Funeral Svc Co</td><td>Andrew Torregrossa &amp; Sons Inc </td></tr><tr><td>Anthony A Pastorelli Funeral  </td><td>Anthony Sconzo Funeral Home   </td></tr><tr><td>Armstrong Funeral Home Inc    </td><td>Arthur Brown &amp; Son Inc Funeral</td></tr><tr><td>Arthur's Funeral Home Inc     </td><td>Ateret Avot Of Midwood        </td></tr><tr><td>Augustana Lutheran Home       </td><td>B Anastasio &amp; Son Inc         </td></tr><tr><td>Bais Hachaim Chapels          </td><td>Basile Funeral Home Inc       </td></tr><tr><td>Bay Park Medical              </td><td>Bay Ridge Family Health Ctr   </td></tr><tr><td>Bay Ridge Korean Health Ctr   </td><td>Benjamin E Robinson Funeral   </td></tr><tr><td>Benjmain Robinson Funeral     </td><td>Bensonhurst Prospero &amp; Son Inc</td></tr><tr><td>Beth Israel Med Center-Kings  </td><td>Bethany Methodist Home Inc    </td></tr><tr><td>Bikur Cholim Of Sea Gate      </td><td>Bishop Henry B Hucles Nurs Hm </td></tr><tr><td>Bishop Maguvero Ctr-Geriatric </td><td>Blair-Mazzarella Funeral Home </td></tr><tr><td>Blizinski Funeral Home Inc    </td><td>Borinquen Memorial Fnrl Home  </td></tr><tr><td>Boro Park Primary Care Clinic </td><td>Boulevard Riverside Chapels   </td></tr><tr><td>Boulevard-Park West Chapels   </td><td>Brettschneider Funeral Home   </td></tr><tr><td>Brighton Funeral Bureau       </td><td>Brizzi Funeral Home           </td></tr><tr><td>Brookdale Hospital Med Ctr    </td><td>Brooklyn Chinese Family Health</td></tr><tr><td>Brooklyn Endoscopy &amp; Amsurg   </td><td>Brooklyn Family Medical Assoc </td></tr><tr><td>Brooklyn Hospital Center      </td><td>Brooklyn Hospital Ctr         </td></tr><tr><td>Brooklyn Jewish Hospital Mntnc</td><td>Brooklyn Manor Home For Adults</td></tr><tr><td>Brooklyn Methodist Church Home</td><td>Brooklyn Queens Nursing Home  </td></tr><tr><td>Brooklyn Spine &amp; Arthritis Ctr</td><td>Brooklyn Women's Svc          </td></tr><tr><td>Brown's Funeral Home          </td><td>Buena Vida Nursing Home       </td></tr><tr><td>Cabs Nursing Home Co          </td><td>Calvary Hospital              </td></tr><tr><td>Calvin P Parker Funeral Chapel</td><td>Campanaro Falletta Funeral Hm </td></tr><tr><td>Capital Funeral Homes Inc     </td><td>Caribbean American Family Hlth</td></tr><tr><td>Castle Senior Living-Prospect </td><td>Catholic Charities Diocese    </td></tr><tr><td>Catholic Medical Ctr-Brooklyn </td><td>Caton Park Nursing Home       </td></tr><tr><td>Center For Child Development  </td><td>Center For Dialysis-Parkside  </td></tr><tr><td>Center For Healthcare Svc     </td><td>Ceraso Gennarelli Funeral Home</td></tr><tr><td>Charles Drew Clinic           </td><td>Charles H Mike Funeral Home   </td></tr><tr><td>Chevra Kadisha Prushim Genera </td><td>Chevra Kadisha Somrei Hachomos</td></tr><tr><td>Cleveland R Vaughan Funeral Hm</td><td>Clifford N Branch Sr          </td></tr><tr><td>Cnr Alzheimer's Adult Day     </td><td>Cobble Hill Chapels           </td></tr><tr><td>Cobble Hill Nursing Home      </td><td>Concord Nursing Home Telephone</td></tr><tr><td>Coney Island Hospital         </td><td>Constantinides Funeral Parlor </td></tr><tr><td>Coromilas Funeral Chapel Inc  </td><td>Court Street Funeral Home Inc </td></tr><tr><td>Cremation Consultants         </td><td>Cumberland Hospital           </td></tr><tr><td>Cusimano &amp; Russo Inc          </td><td>Cypress Hills Cemetery        </td></tr><tr><td>D K Robeson Ej Simms Funeral  </td><td>D'arienzo Funeral Home Inc    </td></tr><tr><td>Dahill Funeral Home           </td><td>Daniel George &amp; Son Fnrl Home </td></tr><tr><td>Daniel Jean Frantz Funeral Svc</td><td>David Lane &amp; Floyd Gilmore    </td></tr><tr><td>David Lane Funeral Parlor Inc </td><td>De Kalb Funeral Svc           </td></tr><tr><td>De Riso Funeral Home Inc      </td><td>Ditmas Park Care Ctr          </td></tr><tr><td>Donnelly &amp; Purcell Funeral Inc</td><td>E &amp; C Owens Memorial Chapels  </td></tr><tr><td>Edward Hc Dunn Inc            </td><td>Edward J Robeson Funeral Home </td></tr><tr><td>Edwards C Halvorsen Inc       </td><td>English Brothers Funeral Home </td></tr><tr><td>Erskine Funeral Home Inc      </td><td>Evergreen Funeral Home Inc    </td></tr><tr><td>F G Guido Funeral Home Inc    </td><td>Fairhaven Funeral Chapel Inc  </td></tr><tr><td>Family Funeral Svc Inc        </td><td>Family Health Ctr             </td></tr><tr><td>Family Health Ctr Network     </td><td>Family Health Svc             </td></tr><tr><td>Family Physician Health Ctr   </td><td>Four Seasons Nursing &amp; Rehab  </td></tr><tr><td>Frank J Barone Inc            </td><td>Frank R Bell Funeral Home Inc </td></tr><tr><td>Frantz Daniel Jean Funeral Svc</td><td>Funeraria Hermanos Inc        </td></tr><tr><td>Funeraria La Fe Inc           </td><td>Future Care Consultants       </td></tr><tr><td>Gamble Funeral Home Inc       </td><td>Garden Of Eden Home For Adults</td></tr><tr><td>Garlick Kirschenbaum Chapels  </td><td>Geri-Care Systems Inc         </td></tr><tr><td>Gomez Funeral Home Inc        </td><td>Goodwin Place Operations      </td></tr><tr><td>Grace Funeral Chapels         </td><td>Greenpark Care Ctr            </td></tr><tr><td>Greenpoint Chapels Ltd        </td><td>Greenpoint Pediatrics         </td></tr><tr><td>Guarino Funeral Home Inc      </td><td>Gutterman's Inc               </td></tr><tr><td>Haber House Senior Ctr        </td><td>Harbor View                   </td></tr><tr><td>Harvey's Funeral Svc Inc      </td><td>Healthy Connection            </td></tr><tr><td>Heights &amp; Hill Funeral Home   </td><td>Hellenic Memorial Chapel Inc  </td></tr><tr><td>Henry Mc Caddin &amp; Son Inc     </td><td>Herbst Trzaska Waldeck Chapels</td></tr><tr><td>Herbst-Schaefer-Waldeck Chapel</td><td>Holy Family Home              </td></tr><tr><td>House Of Hills Inc            </td><td>Hugh A Reid Inc               </td></tr><tr><td>I J Morris Inc                </td><td>Interboro Funeral Svc         </td></tr><tr><td>Interfaith Medical Ctr        </td><td>Irving Sherman                </td></tr><tr><td>Islamic Funeral Svc Inc       </td><td>Island Rehabilitative Svc     </td></tr><tr><td>J Jose Spencer Mortician Inc  </td><td>James F Smallman              </td></tr><tr><td>James H Willie Funeral Home   </td><td>James P Byrnes Funeral Home   </td></tr><tr><td>James W Robinson Funeral Home </td><td>Jch-Maimonides Health &amp; Wlns  </td></tr><tr><td>Jere J Cronin Inc             </td><td>Jnj Home Health Aid Agency    </td></tr><tr><td>John J Healey Funeral Home Inc</td><td>John J Mc Manus &amp; Sons Inc    </td></tr><tr><td>John's Funeral Home           </td><td>Joseph Cottone Funeral Svc    </td></tr><tr><td>Joseph G Duffy Inc            </td><td>Joseph P Clavin Sons Inc      </td></tr><tr><td>Joseph Tari Funeral Home      </td><td>Joseph V Sessa Funeral Home   </td></tr><tr><td>Jurek Park Slope Funeral Home </td><td>Kehila Chapels Inc            </td></tr><tr><td>Kenneth R Johnson Funeral Svc </td><td>Kings County Hospital         </td></tr><tr><td>Kingsboro Psychiatric Ctr     </td><td>Kingsbrook Jewish Medical Ctr </td></tr><tr><td>Kirschenbaum Brothers Inc     </td><td>L J Armistead Funeral Svc     </td></tr><tr><td>La Providencia Family Health  </td><td>Lamesta Funeral Home          </td></tr><tr><td>Las Rosas Funeral Home Inc    </td><td>Lawrence H Woodward Funeral Hm</td></tr><tr><td>Lemberg Home &amp; Geriatric Inst </td><td>Leon W Brown Funeral Inc      </td></tr><tr><td>Leone Funeral Home Inc        </td><td>Lewis Funeral Svc             </td></tr><tr><td>Liberty Trade Svc             </td><td>Lifespire                     </td></tr><tr><td>Lockwood Funeral Home         </td><td>Long Island College Hospital  </td></tr><tr><td>Long Island Out Patient Clinic</td><td>Louis Biundo Funeral Svc      </td></tr><tr><td>Louis De Luca Mayflower Home  </td><td>Louis Tommaso Inc             </td></tr><tr><td>Lucas Stobierski Gardenview   </td><td>Lutheran Medical Ctr          </td></tr><tr><td>M J Smith Sons Inc            </td><td>Maalin &amp; Bakodesh             </td></tr><tr><td>Magical Years Early Childhood </td><td>Maimonides Bay Ridge Primary  </td></tr><tr><td>Maimonides Cardiac Rehab      </td><td>Maimonides Children's Svc     </td></tr><tr><td>Maimonides Greenpoint Pediatrc</td><td>Maimonides Med Ctr-Physical   </td></tr><tr><td>Maimonides Medical Ctr        </td><td>Maimonides Pediatric &amp; Family </td></tr><tr><td>Maimonides Primary Health Svc </td><td>Maimonides Women's Health Svc </td></tr><tr><td>Majestic Funeral Svc          </td><td>Manhattan Avenue Family Health</td></tr><tr><td>Marcus Garvey Nursing Home    </td><td>Marine Park Funeral Home      </td></tr><tr><td>Marine Park Funeral Home Inc  </td><td>Matteo Guarino                </td></tr><tr><td>Matthew Barrett-Rs Saunders   </td><td>Mayflower Funeral Home        </td></tr><tr><td>Mc Laughlin &amp; Sons Inc        </td><td>Mc Millan Funeral Chapel Inc  </td></tr><tr><td>Memorial &amp; Funeral Group      </td><td>Menorah Home &amp; Hospital       </td></tr><tr><td>Menorah Home Hosp Aged And Inf</td><td>Merritt Green &amp; Jefferson Fnrl</td></tr><tr><td>Metropolitan Jewish Health    </td><td>Micahel Madonick              </td></tr><tr><td>Michael De Luca Funeral Home  </td><td>Michael Madonick Funeral Dir  </td></tr><tr><td>Michael V Cosgrove &amp; Son Inc  </td><td>Midwood Memorial Chapel Inc   </td></tr><tr><td>Miles Funeral Home Inc        </td><td>Miraglia Funeral Chapels Inc  </td></tr><tr><td>Mjg Nursing Home Co           </td><td>Mmc Hematology-Oncology       </td></tr><tr><td>Molinari Funeral Directors    </td><td>Morris Ij Inc                 </td></tr><tr><td>N Y City Health &amp; Hospital    </td><td>N Y Funeral Svc Co            </td></tr><tr><td>Nagel Funeral Home Inc        </td><td>Neighborhood Medical Care     </td></tr><tr><td>Nevsky Memorial Chapels       </td><td>New York Community Hospital   </td></tr><tr><td>New York Congregational Ctr   </td><td>New York Methodist Family Hlth</td></tr><tr><td>New York Methodist Healthcente</td><td>New York Methodist Hospital   </td></tr><tr><td>New York Methodist Mri Ctr    </td><td>Norman L Jeffer Community Chpl</td></tr><tr><td>Northern Manor Geriatric Ctr  </td><td>Norwegian Christian Home      </td></tr><tr><td>Nychhc Brooklyn Long Term     </td><td>Nychhc Kings Co Hospital      </td></tr><tr><td>Nym Foot &amp; Ankle Ctr          </td><td>Oasis Funeral Svc             </td></tr><tr><td>Ocean Parkway Pediatric Group </td><td>Orlando Funeral Home          </td></tr><tr><td>Ortiz Funeral Home            </td><td>Oxford Nursing Home Inc       </td></tr><tr><td>Paccione Funeral Directors Inc</td><td>Palm Beach Home For Adults    </td></tr><tr><td>Palm Gardens Nursing Home     </td><td>Palm Tree Nursing Home        </td></tr><tr><td>Park Avenue Funeral Home      </td><td>Park Manor Home For Adults    </td></tr><tr><td>Park Ridge Family Health Ctr  </td><td>Park Shore Health Care Ctr    </td></tr><tr><td>Park Slope Family Health Ctr  </td><td>Parkshore Health Care Ctr     </td></tr><tr><td>Pavone Funeral Home           </td><td>Peter C Labella Funeral Chapel</td></tr><tr><td>Peter P Dohanich Funeral Home </td><td>Pierre Toussaint              </td></tr><tr><td>Piros Nicola Sons Inc         </td><td>Pitta Funeral Home Inc        </td></tr><tr><td>Ponce Funeral Home Inc        </td><td>Ponce Funeral Homes Inc       </td></tr><tr><td>Project Reach Wodhull Med Ctr </td><td>Prospect Park Nursing Home    </td></tr><tr><td>R G Ortiz Funeral Home Inc    </td><td>R Steven Legall Funeral Svc   </td></tr><tr><td>Raccuglia &amp; Son Funeral Home  </td><td>Ralph Aievoli &amp; Son Inc       </td></tr><tr><td>Raymond L Meachem Sr. Funeral </td><td>Regional Funeral Service      </td></tr><tr><td>Ridgewood Bushwick Senior Citi</td><td>River Manor Care Center       </td></tr><tr><td>Robert F Cranford Funeral Home</td><td>Ruby Weston Manor             </td></tr><tr><td>Sabatino Funeral Home Inc     </td><td>Sampson &amp; Willie Funeral      </td></tr><tr><td>Sampson Funeral Service       </td><td>San Juan Memorial Chapel      </td></tr><tr><td>Saraceno Funeral Homes Inc    </td><td>Scarpaci Funeral Home Inc     </td></tr><tr><td>Schaefer Funeral Parlors      </td><td>Schulman &amp; Schachne Institute </td></tr><tr><td>Scotto Funeral Home Inc       </td><td>Sea Bay Manor Home For Adults </td></tr><tr><td>Sea Crest Health Care Center  </td><td>Seaport Manor Rest Home       </td></tr><tr><td>Senko Funeral Home            </td><td>Sephardic Home For Aged Inc   </td></tr><tr><td>Sheepshead Bay Nursing Home   </td><td>Sheepshead Bay Women's Care   </td></tr><tr><td>Sheepshead Nursing Home       </td><td>Sherman Funeral Home Inc      </td></tr><tr><td>Shore Road Family Health      </td><td>Shore View Nursing Home       </td></tr><tr><td>Shorefront Jewish Geriatric   </td><td>Silver Manor Funeral Service  </td></tr><tr><td>Sister Thea Bowman Family     </td><td>South Beach Park Manor        </td></tr><tr><td>South Shore Manor Home-Adults </td><td>St Francis Assisi Family Hlth </td></tr><tr><td>St Joachim &amp; Anne Residences  </td><td>St John's Episcopal Hospital  </td></tr><tr><td>St Martin De Porres Substance </td><td>St Mary's Ambulatary Care Ctr </td></tr><tr><td>St Mary's Continuing Day      </td><td>St Mary's Hospital            </td></tr><tr><td>St Mary's Hospital-Wic Program</td><td>St Nicholas Home              </td></tr><tr><td>St Nicholas Home Inc          </td><td>St Vincent's Catholic Med Ctr </td></tr><tr><td>St Vincent's Svc Inc          </td><td>State University Hospital     </td></tr><tr><td>Staten Island University Hops </td><td>Staten Island University Hosp </td></tr><tr><td>Steven V Fortunato Funeral    </td><td>Sunrise Assisted Living       </td></tr><tr><td>Sunrise Assisted Living-Mill  </td><td>Sunset Park Family Ctr-Wic    </td></tr><tr><td>Sunset Terrace Wic Program    </td><td>Surf Manor                    </td></tr><tr><td>Thomas F Russo &amp; Son          </td><td>Trzaska Funeral Home Inc      </td></tr><tr><td>Turning Point                 </td><td>Unity Funeral Chapels Inc     </td></tr><tr><td>University Hopital Of Brooklyn</td><td>University Hosp Billing Office</td></tr><tr><td>Us Veterans Affairs Med Ctr   </td><td>Vance R Jorsling Chapels Inc  </td></tr><tr><td>Victory Memorial Hospital     </td><td>Wan Shou Funeral Svc          </td></tr><tr><td>Warbasse Geriactics Office    </td><td>Wartburg Lutheran Home        </td></tr><tr><td>Watkins Funeral Home          </td><td>West End Funeral Chapel       </td></tr><tr><td>West End Gardens Hdf Co       </td><td>White Memorial Chapels Inc    </td></tr><tr><td>Wic Program Maimonides Ctr    </td><td>Willadean W Turner Funeral Svc</td></tr><tr><td>Williamsburg Family Health Ctr</td><td>Willoughby Nursing Home       </td></tr><tr><td>Woodhull Medical Group        </td><td>Woodside Funeral Home         </td></tr><tr><td>Wyckoff Heights Medical Ctr   </td><td>Yablokoff Kingsway Memorial   </td></tr><tr><td>Yereim Orthodox Chapel        </td><td></td></tr></tbody></table>
            </div>
-           
+
          </div>
-         
-         
+
+
          <div class="int-section">
           <div class="int-section-title" style="background-color: #d5de91;">
-            <a name="8" style="color: #737d23;"><p>Contact Information</p></a>
+            <a name="5" style="color: #737d23;"><p>Specialty Services</p></a>
           </div>
           <div class="int-section-content">
-           If you have any questions or need more information, please contact us directly at  (718) 282-4100. We're always here to serve you and make your flower-sending experience a pleasure.<br><br>
-           <br><br>Church Avenue  Florist<br>3206 Church Avenue <br>Brooklyn, NY 11226
+           We specialize in the following services:<br><br>
+           -Large inventory of fresh flowers<br>
+           -Tropicals<br>
+           -Plants<br>
+           -European/dish gardens<br>
+           -Contemporary and traditional arrangements<br>
+           -High-style floral arrangements<br>
+           -Silk arrangements<br>
+           -Dried floral arrangements<br>
+           -Weddings<br>
+           -Funeral designs<br>
+           -Extensive gift line<br>
+           -Gourmet and fruit baskets<br>
+           -Gift baskets<br>
+           -Greeting cards<br>
+           -Candles<br>
+
+
+
            <p></p>
-           
+
          </div>
-         
+
        </div>
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+
+
+       <div class="int-section">
+        <div class="int-section-title" style="background-color: #d5de91;">
+          <a name="8" style="color: #737d23;"><p>Contact Information</p></a>
+        </div>
+        <div class="int-section-content">
+         If you have any questions or need more information, please contact us directly at  (718) 282-4100. We're always here to serve you and make your flower-sending experience a pleasure.<br><br>
+         <br><br>Church Avenue  Florist<br>3206 Church Avenue <br>Brooklyn, NY 11226
+         <p></p>
+
+       </div>
 
      </div>
-   </div>
-   
 
-   <ul>
-    <li>Medical Center Events</li>
-    <li>Funerals</li>
-    <li>Birthdays &amp; Celebrations</li>
-    <li>Weddings</li>
-    <li>New Born &amp; Get Well</li>
-  </ul>
+
+
+
+
+
+
+
+
+
+
+   </div>
+ </div>
+
+
+ <ul>
+  <li>Medical Center Events</li>
+  <li>Funerals</li>
+  <li>Birthdays &amp; Celebrations</li>
+  <li>Weddings</li>
+  <li>New Born &amp; Get Well</li>
+</ul>
 </div>
 <!-- More Ends! -->
 
@@ -672,7 +683,7 @@
 <!-- Footer -->
 <div class="footer">
   <div class="container">
-    <p>Copyright &copy;2016 <a href="index.html">Church Avenue Florist</a></p>
+    <p>Copyright &copy;2016 <a href="/">Church Avenue Florist</a></p>
   </div>
 </div>
 <!-- Footer Ends! -->
