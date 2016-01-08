@@ -537,7 +537,7 @@ a {
       padding: 0 10%;
       margin-bottom: 40px; }
   .page .portfolio {
-    width: 80%;
+    width: 90%;
     margin-bottom: 20px; }
     @media all and (max-width: 862px) {
       .page .portfolio {
@@ -592,7 +592,7 @@ a {
       .page .portfolio .items div a:hover {
         background-position: -220px -220px; }
   .page .team {
-    width: 80%;
+    width: 90%;
     margin-bottom: 50px; }
     @media all and (max-width: 862px) {
       .page .team {
