@@ -33,6 +33,8 @@
               <li><a href="#portfolio" title="arrangments">portfolio</a></li>
               <li><a href="#contact" title="contact us">store info</a></li>
               <li><a href="{% url 'catalogue:index' %}" title="contact us">online store</a></li>
+              <li class="phone-number"><a href="">Phone: (718) 282-4100</a></li>
+
               
             </ul>
 
@@ -332,9 +334,9 @@
           </div>
 
           <div>
-          {%thumbnail '/media/images/birthday-full-1.jpeg'|get_path '220x220' crop='center' as im%}
+            {%thumbnail '/media/images/birthday-full-1.jpeg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
-            <a href="{% static 'images/birthday-full-1.jpeg'%}"></a>
+            <a href="{% media 'images/birthday-full-1.jpeg'%}"></a>
             {%endthumbnail%}
           </div>
 

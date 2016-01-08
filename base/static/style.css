@@ -899,3 +899,9 @@ img.sunflower {
     margin-left: 53px;
 }
 
+@media(min-width: 862px) {
+li.phone-number {
+    position: absolute;
+    top: 50px;
+}
+}
