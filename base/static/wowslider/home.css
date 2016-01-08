@@ -21,7 +21,7 @@
     zoom: 1; 
     position: relative;
     width: 100%;
-    max-width: 100%;
+    max-width: 801px;
     max-height:601px;
     margin:0px auto 0px;
     z-index:90;
@@ -65,7 +65,7 @@
     top:0;
     height:100%;
     max-height:601px;
-    max-width: 100%;
+    max-width: 801px;
     vertical-align: top;
     border:none;
     overflow: hidden;
@@ -253,7 +253,7 @@
 
 .ws_fs_wrapper > #wowslider-container1 {
     margin:0 auto;
-    max-width: 100%;
+    max-width: 801px;
     max-height: none;
     width: 100%;
     top: 50%;
