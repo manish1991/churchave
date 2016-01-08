@@ -303,7 +303,7 @@ a {
   .menu .menu_container {
     margin: 0 auto;
     border-bottom: 1px solid #d5d5d5;
-    width: 80%;
+    width: 95%;
     position: relative; }
     @media all and (max-width: 802px) {
       .menu .menu_container {
