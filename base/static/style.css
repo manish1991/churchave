@@ -231,11 +231,11 @@ a {
 .main {
   text-align: left; }
   .main .container {
-    width: 960px; }
-    @media all and (max-width: 960px) {
+    width: 802px; }
+    @media all and (max-width: 802px) {
       .main .container {
         width: 94%; } }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .main .container {
         width: 100%; } }
 
@@ -272,7 +272,7 @@ a {
       color: #f0c125;
       text-align: center;
       background: url(images/background-logo.png) no-repeat 0 0; }
-      @media all and (min-width: 960px) {
+      @media all and (min-width: 802px) {
         .header h1 a {
           -webkit-transition: all 0.3s ease-in-out;
           -moz-transition: all 0.3s ease-in-out;
@@ -296,8 +296,8 @@ a {
             font-size: 24px; } }
 
 .menu {
-  width: 960px; }
-  @media all and (max-width: 960px) {
+  width: 802px; }
+  @media all and (max-width: 802px) {
     .menu {
       width: 100%; } }
   .menu .menu_container {
@@ -305,19 +305,19 @@ a {
     border-bottom: 1px solid #d5d5d5;
     width: 80%;
     position: relative; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .menu .menu_container {
         width: 92%; } }
     @media all and (max-width: 600px) {
       .menu .menu_container {
         width: 100%; } }
-  @media all and (max-width: 960px) {
+  @media all and (max-width: 802px) {
     .menu ul.items, .menu ul.social {
       text-align: center; } }
   .menu ul.items li, .menu ul.social li {
     float: left;
     margin-right: 12px; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .menu ul.items li, .menu ul.social li {
         display: inline-block;
         float: none;
@@ -332,7 +332,7 @@ a {
     -moz-transition: color 0.3s ease-in-out;
     -o-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .menu ul.items li a {
         padding: 10px 0; } }
     .menu ul.items li a:hover, .menu ul.items li a.active {
@@ -341,7 +341,7 @@ a {
     position: absolute;
     top: 13px;
     right: 0; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .menu ul.social {
         position: static;
         margin-bottom: 10px; } }
@@ -380,7 +380,7 @@ a {
 
 .page {
   padding-top: 61.5px; }
-  @media all and (max-width: 960px) {
+  @media all and (max-width: 802px) {
     .page {
       padding-top: 123px; } }
   @media all and (max-width: 600px) {
@@ -456,7 +456,7 @@ a {
   .page .products, .page .services {
     width: 90.4167%;
     text-align: center; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .page .products, .page .services {
         width: 98%; } }
     .page .products h3, .page .services h3 {
@@ -539,7 +539,7 @@ a {
   .page .portfolio {
     width: 80%;
     margin-bottom: 20px; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .page .portfolio {
         width: 100%;
         text-align: center; } }
@@ -569,7 +569,7 @@ a {
       position: relative;
       float: left;
       margin: 0 18px 30px; }
-      @media all and (max-width: 960px) {
+      @media all and (max-width: 802px) {
         .page .portfolio .item, .page .portfolio .items div {
           float: none;
           display: inline-block; } }
@@ -594,7 +594,7 @@ a {
   .page .team {
     width: 80%;
     margin-bottom: 50px; }
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 802px) {
       .page .team {
         width: 98%; } }
     @media all and (max-width: 600px) {
@@ -671,7 +671,7 @@ a {
           width: 100%;
           padding: 0;
           margin-bottom: 25px; } }
-      @media all and (min-width: 960px) {
+      @media all and (min-width: 802px) {
         .page .team div:nth-child(2n) {
           text-align: right; }
           .page .team div:nth-child(2n) img {
