@@ -88,15 +88,15 @@
 
 
                 {% for i in '12' %}
-              {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
-              {% thumbnail img_url|get_path "128x48" crop="center" as im %}
+                {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
+                {% thumbnail img_url|get_path "128x48" crop="center" as im %}
                 <a href="#" title=""><span><img src="{{im.url}}" alt=""/>{{forloop.counter}}</span></a>
-              
-              {% endthumbnail %}
 
-              {%endwith%}
+                {% endthumbnail %}
 
-              {%endfor%}
+                {%endwith%}
+
+                {%endfor%}
 
                 
 
@@ -330,8 +330,10 @@
           </div>
 
           <div>
-            <img src="{% static 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="{% static 'images/church-full-6.jpg'%}"></a>
+          {%thumbnail '/media/images/birthday-full-1.jpeg'|get_path '220x220' crop='center' as im%}
+            <img src="{{im.url}}" alt="-temp-placeholder-thumb">
+            <a href="{% static 'images/birthday-full-1.jpeg'%}"></a>
+            {%endthumbnail%}
           </div>
 
         </div>
