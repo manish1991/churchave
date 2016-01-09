@@ -75,7 +75,7 @@
           <div id="wowslider-container1"  class="wowslider-container">
 
             <div class="ws_images"><ul>
-              {% for i in '12345' %}
+              {% for i in '123456' %}
               {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
               {% thumbnail img_url|get_path "x500" crop="center" as im %}
               <li><img src="{{im.url}}" alt="" title="" id=""/></li>
@@ -559,7 +559,8 @@
         </div>
         <!-- Member Ends! -->
 
-        <!-- Member -->
+        {% comment %}
+           <!-- Member -->
         <div>
           <img src="{% media 'images/team-member-3.png'%}" alt="team-member-name3">
           <h3>Jane Doe</h3>
@@ -589,6 +590,7 @@
           </ul>
         </div>
         <!-- Member Ends! -->
+        {% endcomment %}
 
       </div>
       <!-- Team Ends! -->
