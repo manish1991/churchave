@@ -75,7 +75,7 @@
           <div id="wowslider-container1"  class="wowslider-container">
 
             <div class="ws_images"><ul>
-              {% for i in '12' %}
+              {% for i in '123' %}
               {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
               {% thumbnail img_url|get_path "x500" crop="center" as im %}
               <li><img src="{{im.url}}" alt="" title="" id=""/></li>
@@ -458,7 +458,9 @@
 
         <!-- Member -->
         <div>
-          <img src="{% static 'images/team-member-1.png'%}" alt="team-member-name1">
+        {%thumbnail '/media/images/john.jpg'|get_path '100x100' crop='center' as im%}
+          <img class="img-team-member" src="{{im.url}}" alt="team-member-name1">
+          {%endthumbnail%}
           <h3>Johnny V.</h3>
           <p><em>Making Beautiful   <span>Floral Arrangements  </span></em></p>
           <p><strong>Floral Designer  </strong></p>

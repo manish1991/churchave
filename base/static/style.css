@@ -905,3 +905,12 @@ li.phone-number {
     top: 50px;
 }
 }
+
+
+.img-team-member {
+    border-radius: 100px;
+    border: 5px solid #FFEDCC;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
