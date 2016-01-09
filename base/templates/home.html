@@ -75,7 +75,7 @@
           <div id="wowslider-container1"  class="wowslider-container">
 
             <div class="ws_images"><ul>
-              {% for i in '123' %}
+              {% for i in '1234' %}
               {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
               {% thumbnail img_url|get_path "x500" crop="center" as im %}
               <li><img src="{{im.url}}" alt="" title="" id=""/></li>
