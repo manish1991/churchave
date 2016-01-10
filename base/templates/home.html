@@ -240,7 +240,9 @@
           </div>
 
           <div>
-            <img src="{% media 'images/b6.jpg'%}" alt="-temp-placeholder-thumb">
+            {%thumbnail '/media/images/b6.jpg'|get_path '220x220' crop='center' as im%}
+            <img src="{{im.url}}" alt="-temp-placeholder-thumb">
+            {%endthumbnail%}
             <a href="{% media 'images/b6.jpg'%}"></a>
           </div>
 
@@ -487,7 +489,7 @@
         <!-- Portfolio List -->
         <div class="item">
           <img src="{% media 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-          <a href="" data-group="birthdays"><span>Mixed Flowers</span></a>
+          <a href="" data-group="parties"><span>Mixed Flowers</span></a>
         </div>
 
         <div class="item">
@@ -502,7 +504,7 @@
 
         <div class="item">
           <img src="{% media 'images/rose.jpg'%}" alt="-temp-placeholder-thumb">
-          <a href="" data-group="parties"><span>Birthdays</span></a>
+          <a href="" data-group="birthdays"><span>Birthdays</span></a>
         </div>
 
         <div class="item">
