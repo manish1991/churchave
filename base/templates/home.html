@@ -141,7 +141,9 @@
             <div>
               {%thumbnail '/media/images/ourselection.jpg'|get_path '220x220' crop='center' as im%}
               <img src="{{im.url}}" alt="-temp-placeholder-thumb">
-              <a href="{% media 'images/ourselection.jpg'%}"></a>
+              {%endthumbnail%}
+              {%thumbnail '/media/images/ourselection.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
               {%endthumbnail%}
               
             </div>
