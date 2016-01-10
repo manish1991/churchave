@@ -129,7 +129,10 @@
               {%thumbnail '/media/images/store.jpg'|get_path '220x220' crop='center' as im%}
               <img src="{{im.url}}" alt="store">
               {%endthumbnail%}
-              <a href="{% media 'images/store.jpg'%}"></a>
+              {%thumbnail '/media/images/store.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
             </div>
             <h3>Our Store </h3>
             <p>Conveniently located in the heart of Flatbush Brooklyn easily accessible by mass transit with ample street  parking . </p>
@@ -158,7 +161,10 @@
               {%thumbnail '/media/images/flower-full-3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-              <a href="{% media 'images/flower-full-3.jpg'%}"></a>
+              {%thumbnail '/media/images/flower-full-3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
             </div>
             <h3>Our Services </h3>
             <p>Full service florist for all Occasions </p>
@@ -210,42 +216,60 @@
             {%thumbnail '/media/images/b1.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/b1.jpg'%}"></a>
+            {%thumbnail '/media/images/b1.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/b2.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/b2.jpg'%}"></a>
+            {%thumbnail '/media/images/b2.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/b3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/b3.jpg'%}"></a>
+            {%thumbnail '/media/images/b3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/b4.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/b4.jpg'%}"></a>
+            {%thumbnail '/media/images/b4.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/b5.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/b5.jpg'%}"></a>
+            {%thumbnail '/media/images/b5.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/b6.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/b6.jpg'%}"></a>
+            {%thumbnail '/media/images/b6.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
         </div>
@@ -259,40 +283,60 @@
             {%thumbnail '/media/images/flower-full-1.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-1.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-1.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-2.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-2.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-2.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-3.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-4.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-4.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-4.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-5.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-5.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-5.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
-            <img src="{% media 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="{% media 'images/church-full-6.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path '220x220' crop='center' as im%}
+            <img src="{{im.url}}" alt="-temp-placeholder-thumb">
+            {%endthumbnail%}
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
         </div>
@@ -306,40 +350,60 @@
             {%thumbnail '/media/images/flower-full-1.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-1.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-1.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-2.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-2.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-2.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-3.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-4.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-4.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-4.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-5.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-5.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-5.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
-            <img src="{% media 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="{% media 'images/church-full-6.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path '220x220' crop='center' as im%}
+            <img src="{{im.url}}" alt="-temp-placeholder-thumb">
+            {%endthumbnail%}
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
         </div>
@@ -353,42 +417,60 @@
             {%thumbnail '/media/images/flower-full-1.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-1.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-1.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-2.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-2.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-2.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-3.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-4.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-4.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-4.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-5.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-5.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-5.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
-            {%thumbnail '/media/images/flower-full-1.jpg'|get_path '220x220' crop='center' as im%}
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
-            <a href="{% media 'images/flower-full-1.jpg'%}"></a>
             {%endthumbnail%}
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
         </div>
@@ -402,40 +484,60 @@
             {%thumbnail '/media/images/flower-full-1.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-1.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-1.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-2.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-2.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-2.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-3.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-4.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-4.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-4.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-5.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-5.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-5.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
-            <img src="{% media 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="{% media 'images/church-full-6.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path '220x220' crop='center' as im%}
+            <img src="{{im.url}}" alt="-temp-placeholder-thumb">
+            {%endthumbnail%}
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
         </div>
@@ -449,42 +551,61 @@
             {%thumbnail '/media/images/flower-full-1.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-1.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-1.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-2.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-2.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-2.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-3.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-3.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-3.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-4.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-4.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-4.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
             {%thumbnail '/media/images/flower-full-5.jpg'|get_path '220x220' crop='center' as im%}
             <img src="{{im.url}}" alt="-temp-placeholder-thumb">
             {%endthumbnail%}
-            <a href="{% media 'images/flower-full-5.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-5.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
 
           <div>
-            <img src="{% media 'images/church-thumbnail-6.jpg'%}" alt="-temp-placeholder-thumb">
-            <a href="{% media 'images/church-full-6.jpg'%}"></a>
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path '220x220' crop='center' as im%}
+            <img src="{{im.url}}" alt="-temp-placeholder-thumb">
+            {%endthumbnail%}
+            {%thumbnail '/media/images/flower-full-6.jpg'|get_path 'x800' crop='center' as im%}
+              <a href="{{im.url}}"></a>
+              {%endthumbnail%}
+              
           </div>
-
         </div>
         <!-- Celebrations Ends! -->
 
