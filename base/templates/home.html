@@ -77,7 +77,7 @@
             <div class="ws_images"><ul>
               {% for i in '123456' %}
               {% with '/media/images/flower-full-'|add:i|add:'.jpg' as img_url %}
-              {% thumbnail img_url|get_path "x650" crop="center" as im %}
+              {% thumbnail img_url|get_path "800x600" crop="center" as im %}
               <li><img src="{{im.url}}" alt="" title="" id=""/></li>
               {% endthumbnail %}
 
