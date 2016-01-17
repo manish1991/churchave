@@ -8914,7 +8914,7 @@ ul.row {
 .product_pod .image_container,
 .product_pod .availability,
 .product_pod .price_color {
-  /*margin-bottom: 10px;*/
+  margin-bottom: 10px;
 }
 .product_pod .product_price {
   position: absolute;
