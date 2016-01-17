@@ -8930,7 +8930,7 @@ ul.row {
   position: relative;
 }
 .image_container img {
-  max-height: 155px;
+  /*max-height: 155px;*/
   max-width: 100%;
   width: auto;
   margin: 0px auto;
