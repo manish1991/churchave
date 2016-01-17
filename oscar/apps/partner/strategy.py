@@ -336,7 +336,7 @@ class DeferredTax(object):
 
 
 class Default(UseFirstStockRecord, StockRequired, NoTax, Structured):
-    rate = D('0.0875')
+    rate = D('0.08875')
     """
     Default stock/price strategy that uses the first found stockrecord for a
     product, ensures that stock is available (unless the product class
@@ -362,7 +362,7 @@ class UK(UseFirstStockRecord, StockRequired, FixedRateTax, Structured):
 
 
 class US(UseFirstStockRecord, StockRequired, FixedRateTax, Structured):
-    rate = D('0.0875')
+    rate = D('0.08875')
     """
     Sample strategy for the US.
 
