@@ -33,7 +33,7 @@ class Selector(object):
         """
         # Default to the backwards-compatible strategy of picking the first
         # stockrecord but charging zero tax.
-        return Default(request)
+        return US(request)
 
 
 class Base(object):
@@ -336,6 +336,7 @@ class DeferredTax(object):
 
 
 class Default(UseFirstStockRecord, StockRequired, NoTax, Structured):
+    rate = D('0.0875')
     """
     Default stock/price strategy that uses the first found stockrecord for a
     product, ensures that stock is available (unless the product class
@@ -360,7 +361,7 @@ class UK(UseFirstStockRecord, StockRequired, FixedRateTax, Structured):
     rate = D('0.20')
 
 
-class US(UseFirstStockRecord, StockRequired, DeferredTax, Structured):
+class US(UseFirstStockRecord, StockRequired, FixedRateTax, Structured):
     rate = D('0.0875')
     """
     Sample strategy for the US.
